@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bggiqmrj1crl8"]
+
+[ext_resource type="Script" uid="uid://8v7p5a1rkce" path="res://script_configuracoes.gd" id="1_r4fjf"]
+[ext_resource type="AudioStream" path="res://Sons/Trilhas/musica-configuracoes.wav" id="2_k8t6d"]
+
+[node name="Configuracoes" type="Node2D" unique_id=198991580]
+script = ExtResource("1_r4fjf")
+
+[node name="Label" type="Label" parent="." unique_id=1966675135]
+offset_left = 145.0
+offset_top = 41.0
+offset_right = 731.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 62
+text = "Configurações"
+
+[node name="ButtonVoltar" type="Button" parent="." unique_id=153044296]
+offset_left = 148.0
+offset_top = 445.0
+offset_right = 389.0
+offset_bottom = 525.0
+theme_override_font_sizes/font_size = 52
+text = "Voltar
+"
+
+[node name="Label2" type="Label" parent="." unique_id=1926522542]
+offset_left = 251.0
+offset_top = 231.0
+offset_right = 837.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 62
+text = "Modo silencioso"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=364556988]
+offset_left = 72.0
+offset_top = 226.0
+offset_right = 132.0
+offset_bottom = 260.0
+scale = Vector2(3, 3)
+theme_override_font_sizes/font_size = 34
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=33770740]
+stream = ExtResource("2_k8t6d")
+autoplay = true
+
+[connection signal="pressed" from="ButtonVoltar" to="." method="voltar"]
+[connection signal="pressed" from="CheckButton" to="." method="_silenciar"]

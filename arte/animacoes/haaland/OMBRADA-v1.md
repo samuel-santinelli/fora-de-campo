@@ -1,0 +1,15 @@
+# Ombrada do Haaland — 12/11/2026
+
+Nova folha `ataque-ombrada-v1.png`, 1536×1024, seis células de 512×512 em grade 3×2. Criada com imagegen a partir de `parado-v1.png`, mantendo uniforme da Noruega, número 9, armadura, coque e capa viking. A versão selecionada tem alpha transparente; conferido em amostras do fundo. Os arquivos existentes foram preservados.
+
+O contato dispara a sequência de seis poses por 0,72 s. Não usa mais quadros da corrida para simular ataque. O personagem mantém o dano de contato existente e fica apoiado no mesmo corpo físico. A âncora dos pés e escala da folha de ataque são ajustadas em runtime; ao terminar ou receber dano, volta à referência normal. Contato persistente pode iniciar outro ataque após a recuperação, sem dano por frame.
+
+Prompt de criação:
+
+```text
+Use case: stylized-concept / game sprite animation production. Create a transparent-background SPRITE SHEET for the exact character in the supplied reference: Haaland, blond fair-skinned athletic footballer with tight blond hair bun, red Norway jersey number 9, light grey shorts number 9, heavy black metal shoulder armor, wrist guards, large shaggy dark-brown Viking fur cape, dark navy shin guards and football boots. Preserve exact face likeness, costume, proportions and detailed crisp pixel-art style of this existing game sprite. Do NOT redesign. Six animation frames of a powerful grounded SHOULDER BARGE attack, ALL facing LEFT. Sheet EXACT 1536x1024 pixels arranged 3 columns and 2 rows of equally sized 512x512 cells. Read left-to-right first row then left-to-right second row. Each cell is one full body, no cropping or overlap. Consistent character height approximately 440 pixels, head at y38, feet at y480 within each cell; hips approximately x256 in every cell. Frame 1 anticipatory squat, shoulder pulled back, arms tense. Frame 2 deep windup torso coiled, knees bent, cape compressing backward. Frame 3 explosive shoulder-led lunge LEFT with clear bent elbows and torso rotation, braced feet. Frame 4 strongest forward shoulder impact pose, wide planted stance, cape whipping right. Frame 5 follow-through, weight forward, arms stabilizing. Frame 6 recovery back toward upright fighting stance. Make the six poses distinctly readable as an attack, not six walking steps. Feet on common ground baseline; all sprites stay fully in their own 512x512 cell with generous transparent gutters. No opponent, no ball, no words, no frame numbers, no gridlines, no backgrounds, no shadows on a floor, no motion blur, no painterly rendering. Transparent alpha background, pixel outlines and carefully clustered shading matching reference.
+```
+
+Refinamento enviado ao gerador: manter exatamente os seis personagens, poses e grade; remover todo fundo, sombra de chão e vinheta; preservar alpha transparente e bordas pixel art, sem redesenhar o personagem.
+
+Fonte selecionada: `exec-d2bd45d4-25fb-488f-8053-ed118d341434.png`, pasta de generated_images da sessão. A cópia usada pelo jogo está neste diretório. O efeito dourado de impacto continua separado da imagem.

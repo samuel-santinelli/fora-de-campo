@@ -1,0 +1,10 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://cena_bola_neymar.tscn" id="1_base"]
+[ext_resource type="Script" path="res://script_cartao_sentenca.gd" id="2_script"]
+[sub_resource type="RectangleShape2D" id="Contato"]
+size = Vector2(14, 20)
+[node name="CartaoSentenca" instance=ExtResource("1_base")]
+[node name="CharacterBody2D" parent="." index="0"]
+script = ExtResource("2_script")
+[node name="CollisionShape2D" parent="CharacterBody2D/Area2D" index="0"]
+shape = SubResource("Contato")

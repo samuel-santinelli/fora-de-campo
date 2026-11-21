@@ -1,0 +1,28 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+/builds/
+/entrega/ForaDeCampo-*.zip
+
+# Generated captures and packaging manifests
+/entrega/divulgacao-v1/*.png
+/entrega/divulgacao-v1/*.png.import
+/entrega/divulgacao-v1/*.html
+/entrega/divulgacao-v1/manifesto.json
+/entrega/capturas-renderizadas/
+/entrega/fonte-manifesto.json
+/entrega/fonte-pacote.json
+/entrega/pacotes.json
+/entrega/recursos-exportados.json
+
+# Local verification output and downloaded public-page snapshots
+/verificacoes/*.log
+/verificacoes/*.pathspec
+/verificacoes/itch-*
+
+# Local agent and credential directories
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*

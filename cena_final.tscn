@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bthvpfoga5duc"]
+
+[ext_resource type="Texture2D" path="res://arte/telas/vitoria-v1.png" id="1_0d7ln"]
+[ext_resource type="Script" uid="uid://b7yeqpb84il5m" path="res://script_final.gd" id="1_3nghp"]
+[ext_resource type="StyleBox" uid="uid://bqta71tg4qkv3" path="res://EstiloBotao/BotaoNormal.tres" id="2_f4ei4"]
+[ext_resource type="StyleBox" uid="uid://bby615vl7f10j" path="res://EstiloBotao/BotaoMouseHover.tres" id="3_3nghp"]
+[ext_resource type="AudioStream" path="res://Sons/Trilhas/musica-vitoria.wav" id="5_cn753"]
+
+[node name="Node2D" type="Node2D" unique_id=298664499]
+script = ExtResource("1_3nghp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307909523]
+position = Vector2(574, 322)
+scale = Vector2(0.83768106, 0.8696809)
+texture = ExtResource("1_0d7ln")
+
+[node name="Button" type="Button" parent="." unique_id=344359192]
+offset_left = 879.0
+offset_top = 537.0
+offset_right = 1145.0
+offset_bottom = 641.0
+theme_override_styles/normal = ExtResource("2_f4ei4")
+theme_override_styles/pressed = ExtResource("3_3nghp")
+theme_override_styles/hover = ExtResource("3_3nghp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=379655884]
+stream = ExtResource("5_cn753")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="ir_para_inicio"]

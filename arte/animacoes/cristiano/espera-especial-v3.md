@@ -1,0 +1,14 @@
+# Espera especial v3 — olhar para a tela
+
+Ferramenta integrada de imagens; referência: espera-especial-v2.png. Mantém oito poses e acrescenta a virada da cabeça nos quadros 6 e 7. O corpo continua de lado. PNG original e versões anteriores preservados.
+
+Prévia atual: previa-espera.html. Comparação anterior: previa-espera-v2.html. Exportar novamente com `powershell -NoProfile -ExecutionPolicy Bypass -File ./arte/animacoes/cristiano/preparar-previa.ps1 -Version v3`.
+
+A pose do sorriso dura 650 ms. Dois brilhos pequenos são desenhados sobre a boca no canvas durante essa pose (60–290 ms e 330–490 ms). Efeito separado dos sprites, acompanha inversão horizontal e pode ser desligado. Em pausa, mostrar um brilho fixo facilita inspeção. Ponto de referência do brilho: (148,40) na célula de 256 pixels. Ainda requer avaliação no tamanho final do jogo.
+
+Verificações: exportação sem recortes vazios ou destinos fora da célula, inspeção visual do quadro 7, JavaScript executado com DOM/canvas simulados verificando reprodução, seleção, efeito ativado/desativado, inversão, avanço e escala. Não houve teste em navegador real. Nenhum script ou cena do jogo alterado. As pequenas diferenças de rosto e capa entre poses e a transição para o perfil continuam sujeitas à revisão visual.
+
+## Prompt utilizado
+
+Edit this approved eight-frame Cristiano Ronaldo idle sprite sheet. Preserve exactly EIGHT full body poses arranged FOUR COLUMNS and TWO ROWS in equal cells. Preserve pixel art style, body facing right, foot positions, hair gesture, cape, anatomy, realistic recognizable Ronaldo face, Portugal red number 7 shirt, green shorts, red socks, gold armor and boots. Change ONLY the head acting in frames 6 and 7 (bottom row columns 2 and 3): frame 6 begins turning his head slightly toward the viewer as his hand lowers; frame 7 completes a natural three-quarter head turn toward the CAMERA, both eyes visible and making direct eye contact with the player, confident charming small smile with clearly visible white teeth. He is breaking the fourth wall while his BODY still faces RIGHT; only neck/head rotates naturally about 35-45 degrees toward viewer. Match Cristiano's original jaw, nose, haircut, eyes and mature athletic face, no cartoon exaggeration or huge grin. Frame 8 bottom right returns to original right-facing neutral idle. Frames 1-5 unchanged in acting. No extra arms. Make the eight characters same scale, full bodies unclipped with safe transparent margins including cape. True TRANSPARENT background, remove all existing haze, bloom, light and shadows outside character silhouette. No scenery, text, grid, ball, speech bubbles. Do NOT paint large sparkle effects: teeth should be visible so a tiny animated glint can be composited separately at runtime. One sprite sheet, not portraits. Priority: preserve approved identity and motion sequence, add believable viewer-directed glance and subtle smile in bottom row only.
+

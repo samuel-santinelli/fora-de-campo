@@ -1,0 +1,16 @@
+# Mbappé — O Relâmpago: referência v1
+
+Primeira proposta visual gerada pela ferramenta integrada de imagens, usando o Cristiano aprovado como referência de estilo e proporções, sem copiar seu rosto ou roupa. PNG salvo em `arte/referencias/mbappe-v1.png`; ainda não integrado às cenas.
+
+Proposta: rosto reconhecível de Mbappé, cabelo bem curto, uniforme azul da França com número 10, calção branco, meias vermelhas, proteções leves prateadas e chuteiras azuis. Sem capa, para contrastar com Cristiano e reforçar a silhueta ágil. Pose voltada para a esquerda, na direção em que encontra o protagonista. Essa é uma referência de aparência, ainda em três quartos no torso; antes das animações ajustar para perfil consistente e alinhar os pés.
+
+Verificação: figura completa inspecionada na saída de geração; PNG com alpha e amostras de fundo transparentes. A prévia do gerador pode mostrar RGB residual sob pixels transparentes. A transparência e os contornos devem ser avaliados ao preparar o sprite de jogo.
+
+Próxima etapa: corrida e arrancada a partir desse visual, depois adaptar o perseguidor existente com velocidade configurável, arrancada curta e intervalo de recuperação. Não substituir o goleiro saltador obrigatório; Mbappé entra como rival adicional na mesma fase. Reutilizar o nó Resistencia e as regras atuais de dano; nenhuma nova fase ou sistema complexo.
+
+## Prompt utilizado
+
+Use case: stylized-concept. Asset: ONE character design reference for MBAPPÉ — O RELÂMPAGO, an optional fast rival in the existing football platformer FORA DE CAMPO. Input image is a STYLE, PIXEL DENSITY, BODY PROPORTION and GAME WORLD reference ONLY: it depicts Cristiano, NOT the character to copy. Create a distinct recognizable Kylian Mbappé face, natural dark skin tone, very short close-cropped hair, athletic lean powerful sprinter build, youthful adult proportions and focused competitive expression. Preserve detailed pixel-art technique, crisp square pixel clusters, dark outlines and limited shading like the reference; realistic facial proportions within pixel art, not chibi, photorealistic painting or 3D render.
+Traditional France-inspired football outfit: navy BLUE jersey, WHITE shorts, RED socks, clearly readable white number 10 on chest and visible shorts panel. Lightweight streamlined sports silhouette with subtle SILVER protective forearm and shin accents, electric-blue boot accents to distinguish him from Cristiano's gold armor. Keep protective pieces minimal and athletic, not bulky robot armor. No cape, helmet, mask, weapons or ball. No brand logos required. This is a sporting rival, not an evil caricature.
+Single FULL-BODY SIDE-VIEW ready stance facing LEFT toward the protagonist's approach: slight forward athletic lean, knees softly flexed, open relaxed hands and feet grounded at common baseline. Clearly recognizable Mbappé face and very short hair, not Cristiano's face or haircut recolored. No action effects in this pose; lightning and sprint trails will be separate game effects. Consistent scale and human limb/head proportions with supplied character reference. Whole head, boots and hands inside generous transparent margins. TRUE TRANSPARENT BACKGROUND, NO halo, vignette, glow, floor, ground shadow, gradient, labels, title, numbers outside clothing or animation sheet. One pose only, clean isolated sprite-design reference.
+

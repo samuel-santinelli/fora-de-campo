@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://blq4n3nwxc3d7"]
+
+[ext_resource type="Script" uid="uid://cfhwjx2i0dvcc" path="res://script_pausa.gd" id="1_4l2li"]
+
+[sub_resource type="StyleBoxFlat" id="Painel"]
+bg_color = Color(0.035, 0.065, 0.115, 0.97)
+border_width_left = 3
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color(0.73, 0.6, 0.36, 1)
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="Normal"]
+bg_color = Color(0.86, 0.71, 0.41, 1)
+border_width_left = 5
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color(0.99, 0.89, 0.67, 1)
+skew = Vector2(0.10, 0)
+content_margin_left = 22.0
+content_margin_right = 22.0
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="Hover"]
+bg_color = Color(0.96, 0.82, 0.56, 1)
+border_width_left = 5
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 3
+border_color = Color(1, 0.95, 0.78, 1)
+skew = Vector2(0.10, 0)
+
+[sub_resource type="StyleBoxFlat" id="Foco"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.96, 0.83, 1)
+skew = Vector2(0.10, 0)
+
+[node name="pausa" type="Node2D" unique_id=365191730]
+process_mode = 3
+z_index = 100
+script = ExtResource("1_4l2li")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=433528096]
+offset_right = 1151.0
+offset_bottom = 646.0
+color = Color(0.015, 0.025, 0.055, 0.76)
+
+[node name="Painel" type="PanelContainer" parent="."]
+offset_right = 500.0
+offset_bottom = 440.0
+theme_override_styles/panel = SubResource("Painel")
+
+[node name="Margem" type="MarginContainer" parent="Painel"]
+layout_mode = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 28
+
+[node name="Conteudo" type="VBoxContainer" parent="Painel/Margem"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Marca" type="Label" parent="Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.84, 0.71, 0.47, 1)
+theme_override_font_sizes/font_size = 14
+text = "FORA DE CAMPO  /  INTERVALO"
+horizontal_alignment = 1
+
+[node name="Titulo" type="Label" parent="Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.85, 0.63, 1)
+theme_override_font_sizes/font_size = 38
+text = "PAUSA TÁTICA"
+horizontal_alignment = 1
+
+[node name="Descricao" type="Label" parent="Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.8, 0.88, 1)
+theme_override_font_sizes/font_size = 16
+text = "Respire. O caminho até a final continua."
+horizontal_alignment = 1
+
+[node name="Continuar" type="Button" parent="Painel/Margem/Conteudo"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.07, 0.12, 0.20, 1)
+theme_override_colors/font_hover_color = Color(0.07, 0.12, 0.20, 1)
+theme_override_colors/font_focus_color = Color(0.07, 0.12, 0.20, 1)
+theme_override_styles/normal = SubResource("Normal")
+theme_override_styles/hover = SubResource("Hover")
+theme_override_styles/pressed = SubResource("Hover")
+theme_override_styles/focus = SubResource("Foco")
+theme_override_font_sizes/font_size = 20
+text = "CONTINUAR  ›"
+
+[node name="Atalho" type="Label" parent="Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.84, 0.71, 0.47, 1)
+theme_override_font_sizes/font_size = 15
+text = "P ou Esc também retomam a partida"
+horizontal_alignment = 1
+
+[node name="Controles" type="Label" parent="Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.8, 0.88, 1)
+theme_override_font_sizes/font_size = 14
+text = "A/D ou ←/→ · Mover     W ou ↑ · Pular\nEspaço · Carrinho     C · Segurar e soltar\nSegure C por 1s para o superchute"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Painel/Margem/Conteudo/Continuar" to="." method="continuar"]

@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://c14782anqkwqw"]
+
+[ext_resource type="Texture2D" uid="uid://cnipw0d70t7v" path="res://portao.png" id="1_67m6j"]
+[ext_resource type="Script" uid="uid://bm2l36uecm0x8" path="res://script_portao.gd" id="1_q3bfc"]
+
+[sub_resource type="Animation" id="Animation_q3bfc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Rect2(4, 40, 834, 414)]
+}
+
+[sub_resource type="Animation" id="Animation_uve0q"]
+resource_name = "abrir"
+length = 0.6
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Rect2(4, 40, 834, 414), Rect2(4, 503, 834, 414), Rect2(4, 1005, 834, 412)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ciqea"]
+_data = {
+&"RESET": SubResource("Animation_q3bfc"),
+&"abrir": SubResource("Animation_uve0q")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r67k"]
+size = Vector2(52, 408.5)
+
+[node name="Portao" type="Node2D" unique_id=116592545]
+script = ExtResource("1_q3bfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=532395601]
+texture = ExtResource("1_67m6j")
+region_enabled = true
+region_rect = Rect2(4, 40, 834, 414)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=473820708]
+libraries/ = SubResource("AnimationLibrary_ciqea")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=413952064]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1640537129]
+position = Vector2(0, -7.25)
+shape = SubResource("RectangleShape2D_3r67k")
+disabled = true
+
+[connection signal="body_entered" from="Area2D" to="." method="ir_para_final"]

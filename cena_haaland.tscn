@@ -1,0 +1,47 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://cena_inimigo2.tscn" id="1_base"]
+[ext_resource type="Script" path="res://script_haaland.gd" id="2_haaland"]
+[ext_resource type="Texture2D" path="res://arte/animacoes/haaland/parado-v1.png" id="3_parado"]
+
+[sub_resource type="RectangleShape2D" id="Corpo"]
+size = Vector2(52, 130)
+
+[sub_resource type="RectangleShape2D" id="Contato"]
+size = Vector2(68, 100)
+
+[node name="Haaland" instance=ExtResource("1_base")]
+
+[node name="CharacterBody2D" parent="." index="0"]
+script = ExtResource("2_haaland")
+
+[node name="Resistencia" parent="CharacterBody2D" index="0"]
+vida_maxima = 4
+
+[node name="Sprite2D" parent="CharacterBody2D" index="1"]
+position = Vector2(0, 61)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+texture = ExtResource("3_parado")
+centered = false
+offset = Vector2(-140, -300)
+region_rect = Rect2(0, 0, 320, 320)
+
+[node name="CollisionShape2D" parent="CharacterBody2D" index="2"]
+position = Vector2(0, -4)
+shape = SubResource("Corpo")
+
+[node name="RayCast2D" parent="CharacterBody2D" index="4"]
+enabled = false
+
+[node name="Area2D" parent="CharacterBody2D" index="5"]
+monitoring = false
+
+[node name="CollisionShape2D" parent="CharacterBody2D/Area2D" index="0"]
+position = Vector2(0, -8)
+shape = SubResource("Contato")
+disabled = false
+
+[node name="VisibleOnScreenNotifier2D" parent="CharacterBody2D" index="6"]
+position = Vector2(0, 0)
+rect = Rect2(-70, -80, 160, 145)

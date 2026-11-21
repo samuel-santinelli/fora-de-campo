@@ -1,0 +1,53 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://cena_inimigo2.tscn" id="1_base"]
+[ext_resource type="Script" path="res://script_mbappe.gd" id="2_mbappe"]
+[ext_resource type="Texture2D" path="res://arte/animacoes/mbappe/parado-v1.png" id="3_parado"]
+[ext_resource type="Script" path="res://script_efeito_arrancada.gd" id="4_efeito"]
+
+[sub_resource type="RectangleShape2D" id="Corpo"]
+size = Vector2(42, 108)
+
+[sub_resource type="RectangleShape2D" id="Contato"]
+size = Vector2(56, 76)
+
+[node name="Mbappe" instance=ExtResource("1_base")]
+
+[node name="CharacterBody2D" parent="." index="0"]
+script = ExtResource("2_mbappe")
+
+[node name="Resistencia" parent="CharacterBody2D" index="0"]
+vida_maxima = 2
+
+[node name="Sprite2D" parent="CharacterBody2D" index="1"]
+position = Vector2(0, 61)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+texture = ExtResource("3_parado")
+centered = false
+offset = Vector2(-140, -240)
+region_rect = Rect2(0, 0, 256, 256)
+
+[node name="CollisionShape2D" parent="CharacterBody2D" index="2"]
+position = Vector2(0, 7)
+shape = SubResource("Corpo")
+
+[node name="RayCast2D" parent="CharacterBody2D" index="4"]
+enabled = false
+
+[node name="Area2D" parent="CharacterBody2D" index="5"]
+monitoring = false
+
+[node name="CollisionShape2D" parent="CharacterBody2D/Area2D" index="0"]
+position = Vector2(0, 10)
+shape = SubResource("Contato")
+disabled = false
+
+[node name="VisibleOnScreenNotifier2D" parent="CharacterBody2D" index="6"]
+position = Vector2(0, 0)
+rect = Rect2(-60, -65, 120, 130)
+
+[node name="EfeitoArrancada" type="Node2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(0, 61)
+script = ExtResource("4_efeito")

@@ -1,0 +1,11 @@
+# Cristiano — pose base v1
+
+Referência de aparência gerada pela ferramenta integrada de imagens a partir de `cristiano-com-capa.png`. Ainda não integrada às cenas nem preparada como quadro final em resolução de jogo.
+
+Prompt utilizado:
+
+Use case: identity-preserve / game sprite preparation. Use the supplied approved Cristiano character as the strict visual identity reference. Produce ONE full-body neutral idle pose for a 2D SIDE-SCROLLING PLATFORMER, facing RIGHT in true SIDE PROFILE: shoulders and hips rotated sideways, face in right profile, no frontal three-quarter torso. Preserve recognizable Cristiano face and short dark hair, athletic adult proportions, red Portugal shirt with green trim, green shorts with visible white number 7, red socks, small golden shoulder plates, gold forearm guards, gold shin guards, golden football boots and short deep-red cape with narrow golden hem attached behind shoulders and ending at upper thigh. Cape falls behind silhouette toward LEFT, never obscuring legs or hands. This is the SAME character, not a redesign. Simplify microdetails only enough for readable game pixel art: coherent crisp square pixel clusters, limited shading, dark outline, no soft painterly texture, no gradient edge antialiasing, no chibi. Both boots visible on the SAME horizontal ground baseline, relaxed ready stance with slightly bent knees and arms naturally at sides. Single centered figure with generous transparent margin, no clipping. GENUINELY TRANSPARENT alpha background: remove original black background, ALL original glow, floor, ground shadow. NO BALL in this character asset: ball is a separately controlled game object. No effects, labels, words, title, grid or animation sheet; one pose only. Output clear enlarged pixel art suitable as master idle reference before exact in-game resolution conversion.
+
+Validação: PNG de 1024 × 1536 com canal alpha; pixel do canto superior esquerdo transparente. A arte mantém torso parcialmente em três quartos e halo visível na prévia; precisa de refinamento antes de ser usada como sprite final.
+
+Próximas animações: parado, corrida, salto/queda, carrinho, chute, dano e morte. Cabeçada e vitória como complementos. Manter identidade e alinhar os pés entre quadros.

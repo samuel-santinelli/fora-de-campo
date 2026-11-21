@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dewhmb7o3v5ih"]
+
+[ext_resource type="Script" uid="uid://qw5c65ecu5v5" path="res://script_game_over.gd" id="1_p4wjp"]
+[ext_resource type="Texture2D" path="res://arte/telas/game-over-v2.png" id="1_s1hed"]
+[ext_resource type="AudioStream" path="res://Sons/Trilhas/musica-game-over.wav" id="3_niwnu"]
+[ext_resource type="StyleBox" uid="uid://bqta71tg4qkv3" path="res://EstiloBotao/BotaoNormal.tres" id="3_onwj6"]
+[ext_resource type="StyleBox" uid="uid://bby615vl7f10j" path="res://EstiloBotao/BotaoMouseHover.tres" id="4_q6b3y"]
+
+[node name="GameOver" type="Node2D" unique_id=240354240]
+script = ExtResource("1_p4wjp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1652592420]
+position = Vector2(573.5, 322.99997)
+scale = Vector2(0.84275365, 0.8723404)
+texture = ExtResource("1_s1hed")
+
+[node name="ButtonReiniciar" type="Button" parent="." unique_id=1068200205]
+offset_left = 349.0
+offset_top = 330.0
+offset_right = 545.0
+offset_bottom = 409.0
+theme_override_styles/normal = ExtResource("3_onwj6")
+theme_override_styles/pressed = ExtResource("4_q6b3y")
+theme_override_styles/hover = ExtResource("4_q6b3y")
+
+[node name="ButtonSair" type="Button" parent="." unique_id=560030873]
+offset_left = 610.0
+offset_top = 327.0
+offset_right = 809.0
+offset_bottom = 415.0
+theme_override_styles/normal = ExtResource("3_onwj6")
+theme_override_styles/pressed = ExtResource("4_q6b3y")
+theme_override_styles/hover = ExtResource("4_q6b3y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=808227213]
+stream = ExtResource("3_niwnu")
+volume_db = -6.469
+autoplay = true
+
+[connection signal="pressed" from="ButtonReiniciar" to="." method="reiniciar"]
+[connection signal="pressed" from="ButtonSair" to="." method="sair"]

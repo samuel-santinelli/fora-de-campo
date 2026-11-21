@@ -1,0 +1,17 @@
+# Corrida v2 — ajuste de postura
+
+Ajuste solicitado: aproximar a linguagem corporal da corrida de Cristiano Ronaldo, preservando o visual aprovado. Gerado com a ferramenta integrada de imagens usando corrida-v1.png como referência. Postura mais ereta, braços próximos ao tronco, mãos menos fechadas e passada menos alongada. Trata-se de interpretação artística; não é captura de movimento nem reprodução biomecânica exata.
+
+Oito quadros exportados em quadros-corrida-v2, folha horizontal corrida-v2-alinhada.png e metadados corrida-v2-alinhada.json. Prévia atual: previa-corrida.html; comparação anterior: previa-corrida-v1.html. Tempos: 75,65,60,65,75,65,60,65 ms (530 ms por ciclo). Escala comum e plano de apoio por linha, com folga nos pés preservada.
+
+A corrida ainda não foi integrada ao Godot. Validar na prévia a fluidez, identidade facial e alternância dos membros. Conferir proporções comparando com o repouso. A geração pode mudar detalhes de roupa entre poses.
+
+Verificado: oito arquivos exportados, sem destino fora das células; caminhos das folhas; duração total; reprodução, pausa/avanço, seleção, inversão e escala com DOM/canvas simulados. Não testado em navegador real nesta etapa.
+
+Reexportar: `powershell -NoProfile -ExecutionPolicy Bypass -File ./arte/animacoes/cristiano/preparar-corrida.ps1 -Version v2`.
+
+## Prompt utilizado
+
+Edit target: approved Cristiano Ronaldo 8-frame running sprite sheet. User approves character design and art but wants recognizable Ronaldo running body language, not this generic exaggerated long-stride platformer sprint. Preserve face identity, haircut, red Portugal 7 shirt, green shorts, red socks, gold light armor and boots, short red/gold cape, detailed pixel art, eight frames FOUR COLUMNS TWO ROWS, right-facing side view. Change the RUNNING POSES only. More upright tall athletic torso, subtle 5-10 degree forward lean from ankles, shoulders relaxed and stable, chin level gaze ahead, chest open. Compact rhythmic arm drive close to ribs, elbows around 90 degrees, relaxed hands with subtle open fingers not boxer fists. Quick powerful football running cadence, knee drives forward but does not reach waist, planted forefoot lands below hips rather than heel stretched far out front. Shorter controlled flight, recover trailing heel toward buttock, avoid giant bounding leaps, stretched split legs or superhero punches. Head remains stable with minimal bob. Two arms and two legs, anatomically believable consistent limbs. Cape trails left but restrained, not massively billowing. No ball.
+Full running cycle alternating near/far legs: 1 near forefoot contact under center of mass and far knee bent recovering; 2 near leg absorbs weight while far knee comes forward; 3 near leg pushes back and far thigh advances; 4 brief flight with far shin preparing to land and near heel folded up; 5 far forefoot contacts under hips, near knee recovering; 6 far leg absorbs weight and near knee advances; 7 far leg pushes backward and near thigh advances; 8 brief flight preparing near foot contact to loop into1. Contralateral arm drive changes with each leg half-cycle. First and second halves must visibly alternate arms and legs. Same dimensions, body scale, pelvis anchor and camera across all 8 equal cells, same ground plane for contacts, safe margins around every complete figure. Do not change to walking or tiptoe standing. Transparent background with NO haze, glow, ground, shadow, labels or grid. Remain faithful to the approved face and clothing, improve only running mechanics.
+

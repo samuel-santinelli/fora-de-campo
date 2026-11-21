@@ -1,0 +1,17 @@
+# Posto do Impedimento — referência v1
+
+Imagem `fiscalizacao-impedimento-v1.png`, gerada pela ferramenta integrada imagegen usando `servico-haaland-v1.png` como referência de estilo e iluminação. Original preservado; cópia salva no projeto. Imagem opaca de 1672 × 941, inspecionada na saída do gerador.
+
+Cabine envidraçada, bandeiras quadriculadas, grades, scanners e pequenos sinais âmbar identificam a fiscalização. Os equipamentos ficam atrás do muro baixo, com caminho frontal livre. Mantém o céu do entardecer e a proximidade do estádio. A cor vermelha e a escala monumental ficam reservadas para o cenário do VAR-01.
+
+## Prévia e futura integração
+
+Sexta opção em `previa-ambientes.html`, com Cristiano e o primeiro quadro de avanço já existente do Impedimento: célula 384, âncora (230,360), escala 0,5. Guia ilustrativa de chão y508. Não foi criada animação nem alterado o sprite do personagem.
+
+O topo do piso frontal está próximo de y816 na fonte. Para integrar, conferir esse corte e usar altura 607 no mundo; início sugerido x5850, sobrepondo o fim do serviço por pelo menos 120 px. Com escala 607/816 o painel terminaria perto de x7094, cobrindo o encontro x6350 e permitindo transição para a entrada do chefe. Não atribuir colisões aos scanners, cabine ou cancelas do fundo.
+
+Esta etapa cria somente referência e prévia: scripts, cenas e colisões do jogo permanecem iguais. Não houve inspeção em navegador real; a verificação automatizada da prévia usa DOM/canvas simulados e confirma os arquivos e controles. Avaliar contraste do robô e sua bandeira amarela na prévia antes da integração. A imagem não é um tile seamless.
+
+## Prompt — ferramenta integrada imagegen
+
+Use case: stylized-concept. Asset: NEW opaque background reference for FORA DE CAMPO detailed pixel-art 2D side-scrolling football platformer. Input image is STYLE AND LIGHTING REFERENCE ONLY, do not copy its loading yard. Sixth zone: THE OFFSIDE INSPECTION POST, last checkpoint before the final VAR robot. Wide landscape 1672x941 or 16:9. Strict orthographic side view, a completely clear flat foreground path runs left to right, pale concrete rim at about 82 percent image height with dark brick cross-section below. Behind the path: stadium security inspection booth on the left, smoked glass, small amber status lights, a pair of elevated black and muted yellow-orange checkerboard assistant-referee pennants, steel mesh fence and inspection scanners placed entirely behind a low divider wall. Retracted barrier arms raised in the BACKGROUND, never crossing the playable lane. Right half has quiet dark slate wall and fencing for readable robot silhouette and yellow warning effects. Partial stadium facade and blue-hour dusk sky with restrained pink clouds in upper quarter, consistent with reference. Clear visual identity of assistant-referee OFFSIDE enforcement through restrained checkerboard pattern and inspection hardware; no readable words or symbols resembling UI. Palette charcoal, slate, weathered steel, small ochre/amber accents, not overwhelmingly yellow. Crisp deliberate pixel clusters, limited detailed shading, coherent dark outlines, matching supplied pixel-art background. Foreground walking line remains perfectly horizontal with no stairs, pits, boxes, platforms or barriers; no perspective road into distance. No characters, robots, people, balls, HUD, typography, logos, watermarks. No huge red eye or red laser, reserve those for final boss. No photorealism, 3D, smooth painting or bloom. Full opaque image, not atlas or sprite sheet.
